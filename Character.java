@@ -23,7 +23,7 @@ public class Character {
     public void swingSword(){
         int staminaCost = 10;
         if(getHealth() <= 0){
-            System.out.println("are you kidding me? Character is dead.");
+            System.out.println("Are you kidding me? Character is dead.");
         }
         else{
             if(stamina >= staminaCost){
@@ -45,7 +45,7 @@ public class Character {
             }   
         }
         else{
-            System.out.println("Character is dead.");
+            System.out.println("Noooooo Are you kidding me? Your Character is dead.");
         }
     }
 
