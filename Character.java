@@ -22,19 +22,29 @@ public class Character {
 
     public void swingSword(){
         int staminaCost = 10;
-        if(stamina >= staminaCost){
-            stamina -= staminaCost;
-            System.out.println("Character swings sword. Stamina is now " + getStamina() + ".");
+        if(getHealth() <= 0){
+            System.out.println("are you kidding me? Character is dead.");
         }
         else{
-            System.out.println("Your character needs to cool down.");
+            if(stamina >= staminaCost){
+                stamina -= staminaCost;
+                System.out.println("Character swings sword. Stamina is now " + getStamina() + ".");
+            }
+            else{
+                System.out.println("Your character needs to cool down.");
+            }
         }
     }
 
     public void takeDamage(int damage){
         health -= damage;
-        System.out.println("Character takes " + damage + " damage. Health is now " + getHealth() + ".");
-        if(health == 0){
+        if(getHealth() >= 0){
+            System.out.println("Character takes " + damage + " damage. Health is now " + getHealth() + ".");
+            if(getHealth() == 0){
+                System.out.println("Character is dead.");
+            }   
+        }
+        else{
             System.out.println("Character is dead.");
         }
     }
@@ -42,6 +52,7 @@ public class Character {
     public void rest(){
         health = maxHealth;
         stamina = maxStamina;
+        System.out.println("Character has rested. Health and stamina restored to maximum.");
     }
 
 }

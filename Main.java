@@ -8,10 +8,16 @@ public class Main {
         hero.swingSword();
         hero.swingSword();
         hero.swingSword();
+        hero.swingSword();
 
         hero.takeDamage(30);
         hero.takeDamage(50);
         hero.takeDamage(20);
+
+        hero.takeDamage(20);
+        hero.takeDamage(20);
+
+        hero.swingSword();
 
         hero.rest();
 
